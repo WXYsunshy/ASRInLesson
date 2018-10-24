@@ -11,6 +11,7 @@
     <OutputPath>.</OutputPath>
     <Name>ASR_In_Lesson</Name>
     <RootNamespace>ASR_In_Lesson</RootNamespace>
+    <InterpreterId>Global|ContinuumAnalytics|Anaconda36-64</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,6 +23,28 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="ASR_In_Lesson.py" />
+    <Compile Include="compare.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EuclideanDistance.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Euclidean_Distance.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="extractfeatures.py" />
+    <Compile Include="MFCCfeatures.py" />
+    <Compile Include="mfcc_delta_features.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SameSegment.py" />
+    <Compile Include="speech_spectrogram.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TimeSegment.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|ContinuumAnalytics|Anaconda36-64" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
