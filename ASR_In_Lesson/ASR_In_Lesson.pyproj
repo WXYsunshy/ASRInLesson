@@ -26,9 +26,6 @@
     <Compile Include="compare.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="EuclideanDistance.py">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Euclidean_Distance.py">
       <SubType>Code</SubType>
     </Compile>
