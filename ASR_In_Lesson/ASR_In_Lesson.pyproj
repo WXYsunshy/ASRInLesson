@@ -30,8 +30,17 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="extractfeatures.py" />
+    <Compile Include="librosa_feature.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="mfcc.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="MFCCfeatures.py" />
     <Compile Include="mfcc_delta_features.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="pitch.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="SameSegment.py" />

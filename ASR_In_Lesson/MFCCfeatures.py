@@ -12,6 +12,7 @@ mfcc_path= 'E:/项目/ASRInLesson/mfcc_feature/'
 if not os.path.exists(mfcc_path):
     os.makedirs(mfcc_path)
 audio_list = os.listdir(audio_path)
+#audio_list.sort(key=lambda x:int(x[:-4]))
 objective_list = []
 #寻找匹配关键字的音频
 for obj in audio_list:

@@ -2,9 +2,14 @@ from pydub import AudioSegment
 import os, re
 import wave
 # 循环目录下所有文件
-audio_path='E:/项目/ASRInLesson/time_segment'
-output_path='E:/项目/ASRInLesson/same_segment_3'
+audio_path='E:/项目/ASRInLesson/TimeSegment'
+output_path='E:/项目/ASRInLesson/same_segment_1'
+if not os.path.exists(output_path):
+    os.makedirs(output_path)
+audio_list = os.listdir(audio_path)
 audio_list=os.listdir(audio_path)
+audio_list.sort(key=lambda x:str(x[:-4]))
+print(audio_list)
 for audio in audio_list:
     if audio[-4:]=='.wav':
         this_path_input=os.path.join(audio_path,audio)
