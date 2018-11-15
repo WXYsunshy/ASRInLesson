@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>598c3c73-af5c-40a9-87cd-bfc8cd50cb88</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>ASR_In_Lesson.py</StartupFile>
+    <StartupFile>VAD.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -48,6 +48,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="TimeSegment.py" />
+    <Compile Include="VAD.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|ContinuumAnalytics|Anaconda36-64" />
