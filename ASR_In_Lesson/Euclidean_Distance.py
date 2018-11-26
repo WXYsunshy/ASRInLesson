@@ -3,10 +3,6 @@ import numpy as np
 import csv
 import os
 import re
-#计算欧氏距离公式
-#def EuclideanDistance(vec1,vec2):
-    #dist = np.sqrt(numpy.sum(numpy.square(vec1 - vec2)))
-    #return dist
 #目标样本文件T
 #T1='E:/项目/ASRInLesson/mfcc_feature_delta1_delta2/016_T.csv'
 T1='E:/项目/ASRInLesson/mfcc_feature_delta1_delta2/016_T.csv'
@@ -23,7 +19,7 @@ csv_path='E:/项目/ASRInLesson/mfcc_feature_delta1_delta2'
 csv_list=os.listdir(csv_path)
 #csv_list.sort(key=lambda x:str(x[:-4]))#按照大小排序
 #匹配关键字
-key = '.*_T.*' #匹配所有老师的特征
+key = '.*_.*' #匹配所有老师的特征
 #key = '.*_S.*' #匹配所有学生的特征
 objective_list = []
 for obj in csv_list:
@@ -37,8 +33,6 @@ for f in objective_list:
     if f[-4:]=='.csv':
         f1 = open(T2 + f)
         v2 = pd.read_csv(f1,header=None)
-        #v1 = list_float1
-        #v2 = list_float2
         dist = np.linalg.norm(v1 - v2)
         print(dist)
         #print(type(dist))
@@ -56,17 +50,6 @@ for f in objective_list:
                # writer.writerows([[f, dist]])
 print(len(objective_list))
 #print(list)
-name=['ED']
-test=pd.DataFrame(columns=name,index=objective_list,data=list)
+test=pd.DataFrame(index=objective_list,data=list)
 #print(test)
-test.to_csv(ED_path+'ED_TT.csv',encoding='gbk')
-#T2='E:/项目/ASRInLesson/mfcc_feature/audio73_T.csv'
-#f1=open(T2)
-#list_float2=pd.read_csv(f1,header=None)
-#v1 = list_float1
-#v2 = list_float2
-#v1 = numpy.array(v1)
-#v2 = numpy.array(v2)
-#dist = np.linalg.norm(v1 - v2)
-#print (EuclideanDistance(v1,v2))
-#print(dist)
+test.to_csv(ED_path+'ED_T.csv',encoding='gbk')

@@ -9,8 +9,8 @@ fs_vads = (8000, 16000, 32000, 48000)
 hops = (10, 20, 30)
 vad_modes = (0, 1, 2, 3)
 
-name ='E:/项目/ASRInLesson/data/201_S.wav'
-#name='E:/项目/ASRInLesson/same_segment/audio77_T.wav'
+#name ='E:/项目/ASRInLesson/lessons/test05mi.wav'
+name='E:/项目/ASRInLesson/same_segment/audio77_T.wav'
 data, fs = load(name, sr=None)
 time = np.linspace(0, len(data)/fs, len(data)) # time axis
 fig, ax0 = plt.subplots()
@@ -19,7 +19,7 @@ plt.plot(time, data)
 #plt.show()
 
 for fs_vad, hop, vad_mode in product(fs_vads, hops, vad_modes):
-    vact = vad(data, fs, fs_vad=16000, hoplength=30, vad_mode=2)
+    vact = vad(data, fs, fs_vad=16000, hoplength=30, vad_mode=0)
  
 fig, ax1 = plt.subplots()
 ax1.plot(time, data, color = 'b', label='speech waveform')

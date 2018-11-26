@@ -26,10 +26,16 @@
     <Compile Include="compare.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="cosine_similarity.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Euclidean_Distance.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="extractfeatures.py" />
+    <Compile Include="kmeans.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="librosa_feature.py">
       <SubType>Code</SubType>
     </Compile>
